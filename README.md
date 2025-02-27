@@ -3,4 +3,4 @@ Neste projeto, resolvi concentrar parte do aprendizado no meu último curso bás
 
 Testes a serem realizados:
 - [ ] - Testes de ecommerce como: Clique nos produtos, organizar os produtos por filtro, adicionar itens ao carrinho, verificar o carrinho, verificar produto e finalizar compra
-- [ ] - Testes de login de usuário testando os campos do formulário e validando se aparecem as mensagens de erro corretas.
+- [x] - Testes de login de usuário testando os campos do formulário e validando se aparecem as mensagens de erro corretas.
