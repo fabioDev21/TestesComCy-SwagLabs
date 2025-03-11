@@ -1,4 +1,10 @@
 {
+  "name": "TestesComCypress-SwagLabs",
+  "version": "1.0.0",
+  "description": "Um projeto onde construo uma suíte de testes frontend utilizando Cypress para validar funções e campos, através de testes unitários e teste de integração de componentes. ",
+  "scripts":{
+    "cy:open": "cypress open"
+  },
   "dependencies": {
     "cypress": "^14.0.3",
     "dotenv": "^16.4.7"

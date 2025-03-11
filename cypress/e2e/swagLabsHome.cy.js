@@ -32,6 +32,5 @@ describe('Página de home no sistema Swag Labs', () => {
         
         cy.contains('THANK YOU FOR YOUR ORDER')
 
-        // apenas um teste
     })
 })
