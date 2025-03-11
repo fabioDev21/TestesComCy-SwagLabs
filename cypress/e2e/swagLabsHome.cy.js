@@ -1,7 +1,23 @@
 describe('Página de home no sistema Swag Labs', () => {
+    // Area de testes para verificar se os elementos citados estao visiveis na tela
+
+    beforeEach(() => {
+        cy.visit('https://www.saucedemo.com/v1/inventory.html')
+    })
+
+    it.only('Cliente na funcao do carrinho', () => {
+        
+        cy.get('.shopping_cart_link')
+        .click()
+        
+        cy.get('.btn_action')
+        .contains(`CHECKOUT`)
+
+    })
+
 
     it('Cliente realiza o fluxo de compra de um produto no sistema', () => {
-        cy.visit('https://www.saucedemo.com/v1/inventory.html')
+        
 
         cy.get(':nth-child(1) > .pricebar > .btn_primary')
             .click()
