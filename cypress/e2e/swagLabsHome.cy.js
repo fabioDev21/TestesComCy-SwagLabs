@@ -30,7 +30,7 @@ describe('Página de home no sistema Swag Labs', () => {
 
     // Teste necessario para verificar se o cliente consegue organizar os produtos na pagina de acordo com a ordenacao alfabetica ao contrario
 
-    it.only("Cliente organiza os produtos no com o alfabeto ao contrario", () => {
+    it("Cliente organiza os produtos no com o alfabeto ao contrario", () => {
         
         cy.get('.product_sort_container')
         .select('Name (Z to A)')
@@ -41,6 +41,23 @@ describe('Página de home no sistema Swag Labs', () => {
 
         cy.get('.inventory_list > :nth-child(6)')
         .contains('Sauce Labs Backpack')
+
+    })
+
+    // Teste para verificar ordenacao de produtos pelo valor crescente
+    it.only("Cliente organiza os produtos no com o alfabeto ao contrario", () => {
+        
+        cy.get('.product_sort_container')
+        .select('Price (low to high)')
+        .should('have.value', 'lohi')
+
+        cy.get(':nth-child(1) > .pricebar > .inventory_item_price')
+        .contains('7.99')
+        .should('be.visible')
+
+        cy.get(':nth-child(6) > .pricebar > .inventory_item_price')
+        .contains('49.99')
+        .should('be.visible')
 
     })
 
