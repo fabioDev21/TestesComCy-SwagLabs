@@ -5,16 +5,30 @@ describe('Página de home no sistema Swag Labs', () => {
         cy.visit('https://www.saucedemo.com/v1/inventory.html')
     })
 
-    it.only('Cliente na funcao do carrinho', () => {
+    // Teste necessario para verificacao do carrinho e confirmar que ele esteja funcional
+
+    it('Cliente testa a funcao do carrinho', () => {
         
         cy.get('.shopping_cart_link')
         .click()
         
         cy.get('.btn_action')
-        .contains(`CHECKOUT`)
+        .should('be.visible')
 
     })
 
+    // Teste necessario para verificar se e possivel deslogar do sistema
+
+    it('Cliente testa a funcao de menu', () => {
+
+        cy.get('.bm-burger-button > button')
+        .click()
+
+        cy.get('#about_sidebar_link')
+        .should('be.visible')
+    })
+
+    // Teste necessario para verificar se o fluxo principal da pagina esta funcional
 
     it('Cliente realiza o fluxo de compra de um produto no sistema', () => {
         
