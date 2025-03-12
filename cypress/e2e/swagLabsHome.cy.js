@@ -28,6 +28,23 @@ describe('Página de home no sistema Swag Labs', () => {
         .should('be.visible')
     })
 
+    // Teste necessario para verificar se o cliente consegue organizar os produtos na pagina de acordo com a ordenacao alfabetica ao contrario
+
+    it.only("Cliente organiza os produtos no com o alfabeto ao contrario", () => {
+        
+        cy.get('.product_sort_container')
+        .select('Name (Z to A)')
+        .should('have.value', 'za')
+
+        cy.get('.inventory_list > :nth-child(1)')
+        .contains('Test.allTheThings() T-Shirt (Red)')
+
+        cy.get('.inventory_list > :nth-child(6)')
+        .contains('Sauce Labs Backpack')
+
+    })
+
+
     // Teste necessario para verificar se o fluxo principal da pagina esta funcional
 
     it('Cliente realiza o fluxo de compra de um produto no sistema', () => {
