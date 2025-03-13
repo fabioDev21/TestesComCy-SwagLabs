@@ -41,6 +41,15 @@ describe('Página de home no sistema Swag Labs', () => {
 
     })
 
+    // Teste que verifica se ao clicar em um produto, se abre uma nova pagina
+    it.only("Cliente clica em um produto para ver mais detalhes de um produto", () => {
+        cy.get('#item_4_title_link > .inventory_item_name')
+            .click()
+
+        cy.url()
+            .should("be.equal","https://www.saucedemo.com/v1/inventory-item.html?id=4")
+    })
+
     // Teste para verificar ordenacao de produtos pelo valor crescente
     it("Cliente organiza os produtos no com o alfabeto ao contrario", () => {
         
@@ -58,7 +67,7 @@ describe('Página de home no sistema Swag Labs', () => {
     })
 
     // Teste que verifica adicao dos itens no carrinho
-    it.only("Cliente adiciona todos os itens ao carrinho", () => {
+    it("Cliente adiciona todos os itens ao carrinho", () => {
 
         cy.get(':nth-child(1) > .pricebar > .btn_primary')
             .click()
