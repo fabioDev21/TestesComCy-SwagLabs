@@ -1,6 +1,5 @@
-# TestesComCy-SwagLabs
-Neste projeto, resolvi concentrar parte do aprendizado no meu último curso básico de Cypress.
+# Sobre o projeto
+Uma suite de testes que utiliza a biblioteca Cypress para testar fluxos e formularios mais comuns ao cliente. Ele aplica o tipo de teste End-to-end.
 
-Testes a serem realizados:
-- [x] - Testes de ecommerce como: Clique nos produtos, organizar os produtos por filtro, adicionar itens ao carrinho, verificar o carrinho, verificar produto e finalizar compra
-- [x] - Testes de login de usuário testando os campos do formulário e validando se aparecem as mensagens de erro corretas.
+## Pre-requisitos
+Para utilizar esse projeto sem problemas voce ira precisar 
