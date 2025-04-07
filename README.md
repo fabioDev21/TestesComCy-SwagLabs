@@ -27,7 +27,7 @@ Para rodar os testes, é muito simples. Rode os seguintes comandos em sua área 
 
 ### Comando para rodar a suíte de testes
 ```sh
-npm cy:open
+npm run cy:open
 ```
 
 ### Me contate via Linkedin
