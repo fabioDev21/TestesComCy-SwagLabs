@@ -42,7 +42,7 @@ describe('Página de home no sistema Swag Labs', () => {
     })
 
     // Teste que verifica se ao clicar em um produto, se abre uma nova pagina
-    it.only("Cliente clica em um produto para ver mais detalhes de um produto", () => {
+    it("Cliente clica em um produto para ver mais detalhes de um produto", () => {
         cy.get('#item_4_title_link > .inventory_item_name')
             .click()
 

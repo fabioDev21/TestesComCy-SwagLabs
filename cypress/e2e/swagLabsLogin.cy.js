@@ -1,6 +1,6 @@
 describe("Página de login no sistema Swag Labs", () => {
-  const std_username = Cypress.env('std_user')
   const password = Cypress.env('password')
+  const std_username = Cypress.env('std_user')
   const lou_username = Cypress.env('lou_user')
   const prb_username = Cypress.env('prb_user')
     
